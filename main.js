@@ -2,6 +2,20 @@
 const {app, BrowserWindow} = require('electron')
 const path = require('path')
 
+const electron = require('electron')
+const globalShortcut = electron.globalShortcut
+
+app.on('ready', function () {
+  globalShortcut.register('CommandOrControl+Shift+I', function () {
+  })
+})
+
+app.on('will-quit', function () {
+  globalShortcut.unregisterAll()
+})
+
+
+
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
