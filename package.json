@@ -18,5 +18,8 @@
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^6.0.12"
+  },
+  "dependencies": {
+    "vex": "0.0.4"
   }
 }
